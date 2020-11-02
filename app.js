@@ -9,6 +9,13 @@ app.use(bodyParser.json());
 // set cors
 app.use(cors())
 
+app.get('/',(req,res)=>{
+    res.send({
+        "Status": 200,
+        "Message": "Hellp"
+    })
+})
+
 app.use('/create',require('./routes/create-user'));
 
 // port
