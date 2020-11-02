@@ -16,7 +16,7 @@ app.get('/',(req,res)=>{
     })
 })
 
-app.use('/create',require('./routes/create-user'));
+app.use('/user',require('./routes/user'));
 
 // port
 const port = 8083;
