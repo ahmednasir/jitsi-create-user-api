@@ -2,6 +2,7 @@
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
+require('dotenv').config()
 
 // set body parser
 app.use(bodyParser.json());
@@ -9,14 +10,23 @@ app.use(bodyParser.json());
 // set cors
 app.use(cors())
 
+// dbs
+require('./services/db');
+
+require('./services/db').connection
+
+
+
 app.get('/',(req,res)=>{
     res.send({
         "Status": 200,
-        "Message": "Hellp"
+        "Message": "Hello"
     })
 })
 
 app.use('/user',require('./routes/user'));
+
+app.use('/terminate', require('./routes/terminateUser'))
 
 // port
 const port = 8083;
