@@ -60,7 +60,7 @@ router.delete('/', (req, res) => {
                 throw error;
             }
             console.log(`stdout: ${stdout}`);
-            userName += `${userName}${DOMAIN_NAME}`
+            userName = `${userName}${DOMAIN_NAME}`
             res.send({
                 "Status": 200,
                 "Message": "Deleted"
