@@ -29,7 +29,7 @@ app.use('/user',require('./routes/user'));
 app.use('/terminate', require('./routes/terminateUser'))
 
 app.get('/rate',(req, res)=>{
-  res.sendFile('/Users/nasirahmed/Documents/projects/nodejs/jitsi-config/public/rate.html');
+  res.sendFile('/home/ubuntu/jitsi-create-user-api/public/rate.html');
 })
 // port
 const port = 8083;
