@@ -17,8 +17,6 @@ module.exports.getRelevantMeetings = () => {
         }
 
     })
-
-
 }
 
 
